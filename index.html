@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Expense Tracker</h1>
+      <p>Manage your income and expenses easily.</p>
+    </header>
+
+    <section class="summary">
+      <div class="card balance">
+        <h3>Total Balance</h3>
+        <h2 id="balance">₹0.00</h2>
+      </div>
+      <div class="card">
+        <h3>Income</h3>
+        <h2 id="income">₹0.00</h2>
+      </div>
+      <div class="card">
+        <h3>Expenses</h3>
+        <h2 id="expenses">₹0.00</h2>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Add Transaction</h2>
+      <form id="transaction-form">
+        <input id="description" type="text"
+          placeholder="Enter description" required>
+
+        <input id="amount" type="number"
+          placeholder="Enter amount" min="0.01"
+          step="0.01" required>
+
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+
+        <button type="submit">Add Transaction</button>
+      </form>
+    </section>
+
+    <section class="history">
+      <h2>Transaction History</h2>
+      <ul id="transaction-list"></ul>
+      <p id="empty-message">No transactions yet. Add one above!</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
